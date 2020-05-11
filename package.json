@@ -1,0 +1,43 @@
+{
+  "author": "dustbort",
+  "bugs": {
+    "url": "https://github.com/dustbort/svelte-flagicon/issues"
+  },
+  "description": "Svelte component for flag-icon-css",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "flag-icon-css": "^3.4.6",
+    "glob": "^7.1.6",
+    "prettier": "^2.0.5",
+    "rollup": "^2.9.0",
+    "rollup-plugin-svelte": "^5.2.1",
+    "svelte": "^3.22.2"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://github.com/dustbort/svelte-flagicon#readme",
+  "keywords": [
+    "svelte",
+    "icons",
+    "svg",
+    "flag",
+    "country"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "name": "svelte-flagicon",
+  "repository": {
+    "type": "git",
+    "url": " git+https://github.com/dustbort/svelte-flagicon.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build:script": "node ./scripts/build.js",
+    "prepublishOnly": "npm run build:script && npm run build"
+  },
+  "svelte": "src/index.js",
+  "version": "1.0.0"
+}

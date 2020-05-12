@@ -1,7 +1,7 @@
 module.exports.kebabToPascal = (text) => {
   return text
-    .replace(/^\w/, p => p.toUpperCase())
-    .replace(/-\w/g, p => p[1].toUpperCase());
+    .replace(/^\w/, (p) => p.toUpperCase())
+    .replace(/-\w/g, (p) => p[1].toUpperCase());
 };
 
 function fixSvg(name, code) {
@@ -26,7 +26,7 @@ function fixSvg(name, code) {
   }
 
   let defIds = [];
-  defs = defs.replace(/\Wid="[^"]+"/g, p => {
+  defs = defs.replace(/\Wid="[^"]+"/g, (p) => {
     const defId = p.substr(5, p.length - 6);
     defIds.push(defId);
     return `${p[0]}id="${defId}{id}"`;
@@ -37,16 +37,17 @@ function fixSvg(name, code) {
   }
 
   code = code
-    .replace(/<svg [^>]*>/, p => `
+    .replace(
+      /<svg [^>]*>/,
+      (p) => `
       ${p.substr(0, p.length - 1)} width="{size}">
       <defs>
         ${defs}
       </defs>
       <g mask="{ round ? 'url(#${name}SvelteFlagIconRound' + id + ')' : '' }">
-    `)
+    `
+    )
     .replace("</svg>", "</g></svg>");
-  ;
-
   return code;
 }
 
@@ -65,5 +66,5 @@ module.exports.getSvelte = (name, svg1x1, svg4x3) => {
     {:else}
     ${fixSvg(name, svg4x3)}
     {/if}
-  `
+  `;
 };

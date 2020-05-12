@@ -1,6 +1,6 @@
 # Svelte FlagIcon Components
 
-SVG icons designed by [lipis](https://github.com/lipis/flag-icon-css).
+SVG icons designed by [lipis](https://github.com/lipis/flag-icon-css). Inspired by [alepop](https://github.com/alepop/svelte-cryptoicon).
 
 # Installation
 

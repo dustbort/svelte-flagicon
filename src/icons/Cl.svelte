@@ -17,12 +17,12 @@
       <path fill-opacity=".7" d="M0 0h708.7v708.7H0z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="ClSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#ClSvelteFlagIconRound)' : '' }">
     <g fill-rule="evenodd" clip-path="url(#a)" transform="scale(.722)">
       <path fill="#fff" d="M354.3 0H1063v354.3H354.3z" />
       <path fill="#0039a6" d="M0 0h354.3v354.3H0z" />
@@ -48,12 +48,12 @@
       <path fill-opacity=".7" d="M0 0h682.7v512H0z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="ClSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#ClSvelteFlagIconRound)' : '' }">
     <g fill-rule="evenodd" clip-path="url(#cl-a)" transform="scale(.9375)">
       <path fill="#fff" d="M256 0h512v256H256z" />
       <path fill="#0039a6" d="M0 0h256v256H0z" />

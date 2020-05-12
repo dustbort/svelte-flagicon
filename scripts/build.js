@@ -22,7 +22,7 @@ glob(`${rootDir}/node_modules/flag-icon-css/flags/4x3/*.svg`, (_, icon4x3s) => {
     const svg1x1 = fs.readFileSync(icon1x1, "utf-8");
 
     const pascalName = kebabToPascal(name);
-    const svelte = getSvelte(svg1x1, svg4x3);
+    const svelte = getSvelte(pascalName, svg1x1, svg4x3);
 
     fs.writeFileSync(
       path.join(rootDir, "src", "icons", `${pascalName}.svelte`),

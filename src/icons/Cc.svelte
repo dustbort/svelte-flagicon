@@ -23,12 +23,12 @@
       d="M0-210L54.9-75.5l144.8 10.6-111 93.8 34.7 141L0 93.3-123.4 170l34.6-141-111-93.8 145-10.6z"
     />
 
-    <mask id="svelte_flagicons_round">
+    <mask id="CcSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#CcSvelteFlagIconRound)' : '' }">
     <path fill="green" d="M0 0h512v512H0z" />
     <circle cx="268.2" cy="250.4" r="61.2" fill="#ffe000" />
     <circle cx="287.3" cy="250.4" r="50.4" fill="green" />
@@ -72,12 +72,12 @@
       d="M0-210L54.9-75.5l144.8 10.6-111 93.8 34.7 141L0 93.3-123.4 170l34.6-141-111-93.8 145-10.6z"
     />
 
-    <mask id="svelte_flagicons_round">
+    <mask id="CcSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#CcSvelteFlagIconRound)' : '' }">
     <path fill="green" d="M0 0h640v480H0z" />
     <circle cx="320" cy="240" r="66.7" fill="#ffe000" />
     <circle cx="340.8" cy="240" r="54.9" fill="green" />

@@ -185,12 +185,12 @@
       <path d="M500 226.4l-63.7 110.3h127.4z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="NiSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#NiSvelteFlagIconRound)' : '' }">
     <path fill="#0067c6" d="M0 0h512v512H0z" />
     <path fill="#fff" d="M0 170.7h512v170.6H0z" />
     <path
@@ -689,12 +689,12 @@
       <path d="M500 226.4l-63.7 110.3h127.4z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="NiSvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#NiSvelteFlagIconRound)' : '' }">
     <path fill="#0067c6" d="M0 0h640v480H0z" />
     <path fill="#fff" d="M0 160h640v160H0z" />
     <path

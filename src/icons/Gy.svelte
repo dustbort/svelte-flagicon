@@ -13,12 +13,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="svelte_flagicons_round">
+    <mask id="GySvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#GySvelteFlagIconRound)' : '' }">
     <g fill-rule="evenodd">
       <path fill="#399408" d="M2 0h510v512H2z" />
       <path fill="#fff" d="M.1 0c-.6 0 495.7 257.6 495.7 257.6L0 511.7.1 0z" />
@@ -44,12 +44,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="svelte_flagicons_round">
+    <mask id="GySvelteFlagIconRound">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
+  <g mask="{ round ? 'url(#GySvelteFlagIconRound)' : '' }">
     <g fill-rule="evenodd">
       <path fill="#399408" d="M2.4 0H640v480H2.4z" />
       <path fill="#fff" d="M.2 0c-.9 0 619.6 241.5 619.6 241.5L0 479.8.2 0z" />

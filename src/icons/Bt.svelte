@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,12 +15,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="BtSvelteFlagIconRound">
+    <mask id="BtSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BtSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BtSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ffd520" d="M0 0h512v512H0z" />
     <path fill="#ff4e12" d="M0 512h512V0z" />
     <g stroke="#000" stroke-width=".5">
@@ -269,12 +271,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="BtSvelteFlagIconRound">
+    <mask id="BtSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BtSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BtSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ffd520" d="M.1 0h640.1v480H.1z" />
     <path fill="#ff4e12" d="M.1 480h640.1V0z" />
     <g stroke="#000" stroke-width=".5">

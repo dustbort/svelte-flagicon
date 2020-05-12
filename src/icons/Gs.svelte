@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,16 +16,16 @@
   width="{size}"
 >
   <defs>
-    <linearGradient id="b">
+    <linearGradient id="b{id}">
       <stop offset="0" stop-color="#d5dfff" />
       <stop offset="1" stop-color="#fff" />
     </linearGradient>
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="#474747" />
       <stop offset="1" stop-color="#f50" />
     </linearGradient>
     <linearGradient
-      id="d"
+      id="d{id}"
       x1="109.3"
       x2="110.9"
       y1="218.5"
@@ -33,7 +35,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="e"
+      id="e{id}"
       x1="125.9"
       x2="126"
       y1="316.4"
@@ -45,7 +47,7 @@
       <stop offset="1" stop-color="#ffc500" />
     </linearGradient>
     <linearGradient
-      id="f"
+      id="f{id}"
       x1="407.9"
       x2="456.4"
       y1="149.4"
@@ -55,7 +57,7 @@
       xlink:href="#b"
     />
     <linearGradient
-      id="g"
+      id="g{id}"
       x1="215.8"
       x2="229"
       y1="103"
@@ -65,7 +67,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="117.6"
       x2="78.2"
       y1="1040.4"
@@ -75,7 +77,7 @@
       xlink:href="#b"
     />
     <linearGradient
-      id="i"
+      id="i{id}"
       x1="264.7"
       x2="255"
       y1="246"
@@ -84,17 +86,17 @@
       gradientUnits="userSpaceOnUse"
       xlink:href="#b"
     />
-    <clipPath id="c">
+    <clipPath id="c{id}">
       <path fill-opacity=".7" d="M0 0h512v512H0z" />
     </clipPath>
 
-    <mask id="GsSvelteFlagIconRound">
+    <mask id="GsSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GsSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#c)">
+  <g mask="{ round ? 'url(#GsSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#c{id})">
       <g stroke-width="1pt">
         <path fill="#006" d="M0 0h1024v512H0z" />
         <path
@@ -125,7 +127,7 @@
         d="M385.6 384.3l19-.7-8-4 72.3-2.8-10.2-3.9-9-12.2-37.6-2.9s-2.8-2.1-7.4-1c-.2-3-3.7-6.8-3.7-6.8l-23-1.7-14.5 9.8 9.7 25 12.4 1.1z"
       />
       <path
-        fill="url(#d)"
+        fill="url(#d{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width="1pt"
@@ -317,7 +319,7 @@
         transform="matrix(.46 0 0 .49 110.3 220.1)"
       />
       <path
-        fill="url(#e)"
+        fill="url(#e{id})"
         fill-rule="evenodd"
         d="M144.6 266.6s7-2 10.8 1 3.7.3 3.7.3 5.5 2 7 1.6-1 .1 1-1.2c2.2-1.2-4.2.3-4.8-2.4-1-1.7.1-3.9-2.2-3.2-1.5-2 1-3.4.5-5.6-1.6 1.2-2.5-.4-3.8 2.5-3-.6-.4-4.8-3.7-5.2 0 3-2.4 3.2-2.6 4.9-1.4 1-7.7 4.7-5.9 7.3z"
         transform="matrix(.86 0 0 .86 207.3 41.7)"
@@ -602,7 +604,7 @@
         d="M427.4 214.5s5.2-4.4 8.9-4.6m-8.2 4c.1-.1 31-4.5 32-5.4m-31.9 5.6l34.6-3m-34.7 3.2s36.7-1.8 39 0m-39.1-.2s36 .3 36.6 1.1m-36.5-1l34.6 2.8m-35-2.6c.2 0 35.3 3 38.7 7.5m1.9 6.3c-.2-.1-12-14.2-40.7-14m.2.3s19.8 1.4 26.1 8.3m-25.8-8.5s12.9-2.5 26.3 13.7"
       />
       <path
-        fill="url(#f)"
+        fill="url(#f{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width="1pt"
@@ -834,7 +836,7 @@
         d="M344.9 178.6v21.1m-16.3-46l-9.8 16.1"
       />
       <path
-        fill="url(#g)"
+        fill="url(#g{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width="1pt"
@@ -860,7 +862,7 @@
         d="M426.1 356.6s-3.3.6-3.2 1-9.8.5-10 .2c-.2-.3-1.5 1.7-1.5 1.7l1.6-1s2.4 2.6 3.1 2.4c.8-.2-.3 1 0 1.1.1.2.9-.4.9-.4l16.3-.3-7.2-4.7zm6.1 5.1l-13.3.4s-3.4 3-3.6 3.7 2.2 1 2.2 1l.7 2.5 1.7-.6s11.4 1.7 21.8-.6c5.3-1.9 6.2-4.1 2.5-5.5-3.7-1.3-11.9-.9-12-1z"
       />
       <path
-        fill="url(#h)"
+        fill="url(#h{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width="1pt"
@@ -868,7 +870,7 @@
         transform="matrix(.86 0 0 .86 207.3 41.7)"
       />
       <path
-        fill="url(#i)"
+        fill="url(#i{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width="1pt"
@@ -1046,16 +1048,16 @@
   width="{size}"
 >
   <defs>
-    <linearGradient id="b">
+    <linearGradient id="b{id}">
       <stop offset="0" stop-color="#d5dfff" />
       <stop offset="1" stop-color="#fff" />
     </linearGradient>
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="#474747" />
       <stop offset="1" stop-color="#f50" />
     </linearGradient>
     <linearGradient
-      id="c"
+      id="c{id}"
       x1="109.3"
       x2="110.9"
       y1="218.5"
@@ -1065,7 +1067,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="d"
+      id="d{id}"
       x1="125.9"
       x2="126"
       y1="316.4"
@@ -1077,7 +1079,7 @@
       <stop offset="1" stop-color="#ffc500" />
     </linearGradient>
     <linearGradient
-      id="e"
+      id="e{id}"
       x1="407.9"
       x2="456.4"
       y1="149.4"
@@ -1087,7 +1089,7 @@
       xlink:href="#b"
     />
     <linearGradient
-      id="f"
+      id="f{id}"
       x1="215.8"
       x2="229"
       y1="103"
@@ -1097,7 +1099,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="g"
+      id="g{id}"
       x1="117.6"
       x2="78.2"
       y1="1040.4"
@@ -1107,7 +1109,7 @@
       xlink:href="#b"
     />
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="264.7"
       x2="255"
       y1="246"
@@ -1117,12 +1119,12 @@
       xlink:href="#b"
     />
 
-    <mask id="GsSvelteFlagIconRound">
+    <mask id="GsSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GsSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GsSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#006" d="M0 0h640v480H0z" />
     <g stroke-width="1pt">
       <path
@@ -1153,7 +1155,7 @@
       d="M515.6 354.3l19-.7-8-4 72.3-2.8-10.2-3.9-9-12.2-37.6-2.9s-2.8-2.1-7.4-1c-.2-3-3.7-6.8-3.7-6.8l-23-1.7-14.5 9.8 9.7 25 12.4 1.1z"
     />
     <path
-      fill="url(#c)"
+      fill="url(#c{id})"
       fill-rule="evenodd"
       stroke="#000"
       stroke-width="1pt"
@@ -1342,7 +1344,7 @@
       transform="matrix(.46 0 0 .5 240.3 190.1)"
     />
     <path
-      fill="url(#d)"
+      fill="url(#d{id})"
       fill-rule="evenodd"
       d="M144.6 266.6s7-2 10.8 1 3.7.3 3.7.3 5.5 2 7 1.6-1 .1 1-1.2c2.2-1.2-4.2.3-4.8-2.4-1-1.7.1-3.9-2.2-3.2-1.5-2 1-3.4.5-5.6-1.6 1.2-2.5-.4-3.8 2.5-3-.6-.4-4.8-3.7-5.2 0 3-2.4 3.2-2.6 4.9-1.4 1-7.7 4.7-5.9 7.3z"
       transform="matrix(.86 0 0 .86 337.3 11.7)"
@@ -1627,7 +1629,7 @@
       d="M557.4 184.5s5.2-4.4 8.9-4.6m-8.2 4c.1-.1 31-4.5 32-5.4m-31.9 5.6l34.6-3m-34.7 3.2s36.7-1.8 39 0m-39.1-.2s36 .3 36.6 1.1m-36.5-1l34.6 2.8m-35-2.6c.2 0 35.3 3 38.7 7.5m1.9 6.3c-.2-.1-12-14.2-40.7-14m.2.3s19.8 1.4 26.1 8.3m-25.8-8.5s12.9-2.5 26.3 13.7"
     />
     <path
-      fill="url(#e)"
+      fill="url(#e{id})"
       fill-rule="evenodd"
       stroke="#000"
       stroke-width="1pt"
@@ -1859,7 +1861,7 @@
       d="M474.9 148.6v21.1m-16.3-46l-9.8 16.1"
     />
     <path
-      fill="url(#f)"
+      fill="url(#f{id})"
       fill-rule="evenodd"
       stroke="#000"
       stroke-width="1pt"
@@ -1885,7 +1887,7 @@
       d="M556.1 326.6s-3.3.6-3.2 1-9.8.5-10 .2c-.2-.3-1.5 1.7-1.5 1.7l1.6-1s2.4 2.6 3.1 2.4c.8-.2-.3 1 0 1.1.1.2.9-.4.9-.4l16.3-.3-7.2-4.7zm6.1 5.1l-13.3.4s-3.4 3-3.6 3.7 2.2 1 2.2 1l.7 2.5 1.7-.6s11.4 1.7 21.8-.6c5.3-1.9 6.2-4.1 2.5-5.5-3.7-1.3-11.9-.9-12-1z"
     />
     <path
-      fill="url(#g)"
+      fill="url(#g{id})"
       fill-rule="evenodd"
       stroke="#000"
       stroke-width="1pt"
@@ -1893,7 +1895,7 @@
       transform="matrix(.86 0 0 .86 337.3 11.7)"
     />
     <path
-      fill="url(#h)"
+      fill="url(#h{id})"
       fill-rule="evenodd"
       stroke="#000"
       stroke-width="1pt"

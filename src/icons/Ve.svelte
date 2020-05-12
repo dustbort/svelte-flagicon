@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,10 +16,10 @@
   width="{size}"
 >
   <defs>
-    <g id="d" transform="translate(0 -36)">
-      <g id="c">
-        <g id="b">
-          <path id="a" fill="#fff" d="M0-5L-1.5-.2l2.8.9z" />
+    <g id="d{id}" transform="translate(0 -36)">
+      <g id="c{id}">
+        <g id="b{id}">
+          <path id="a{id}" fill="#fff" d="M0-5L-1.5-.2l2.8.9z" />
           <use
             width="180"
             height="120"
@@ -31,12 +33,12 @@
       <use width="180" height="120" transform="rotate(144)" xlink:href="#c" />
     </g>
 
-    <mask id="VeSvelteFlagIconRound">
+    <mask id="VeSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#VeSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#VeSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#cf142b" d="M0 0h512v512H0z" />
     <path fill="#00247d" d="M0 0h512v341.3H0z" />
     <path fill="#fc0" d="M0 0h512v170.7H0z" />
@@ -66,10 +68,10 @@
   width="{size}"
 >
   <defs>
-    <g id="d" transform="translate(0 -36)">
-      <g id="c">
-        <g id="b">
-          <path id="a" fill="#fff" d="M0-5L-1.5-.2l2.8.9z" />
+    <g id="d{id}" transform="translate(0 -36)">
+      <g id="c{id}">
+        <g id="b{id}">
+          <path id="a{id}" fill="#fff" d="M0-5L-1.5-.2l2.8.9z" />
           <use
             width="180"
             height="120"
@@ -83,12 +85,12 @@
       <use width="180" height="120" transform="rotate(144)" xlink:href="#c" />
     </g>
 
-    <mask id="VeSvelteFlagIconRound">
+    <mask id="VeSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#VeSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#VeSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#cf142b" d="M0 0h640v480H0z" />
     <path fill="#00247d" d="M0 0h640v320H0z" />
     <path fill="#fc0" d="M0 0h640v160H0z" />

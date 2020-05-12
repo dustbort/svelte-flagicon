@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,12 +15,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="CaSvelteFlagIconRound">
+    <mask id="CaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CaSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#CaSvelteFlagIconRound' + id + ')' : '' }">
     <path
       fill="#fff"
       d="M81.3 3h362.3v512H81.3z"
@@ -41,12 +43,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="CaSvelteFlagIconRound">
+    <mask id="CaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CaSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#CaSvelteFlagIconRound' + id + ')' : '' }">
     <path
       fill="#fff"
       d="M81.1 0h362.3v512H81.1z"

@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,17 +15,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path d="M250 12h500v500H250z" />
     </clipPath>
 
-    <mask id="LySvelteFlagIconRound">
+    <mask id="LySvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#LySvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#a)" transform="translate(-256 -12.3) scale(1.024)">
+  <g mask="{ round ? 'url(#LySvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#a{id})" transform="translate(-256 -12.3) scale(1.024)">
       <path fill="#239e46" d="M0 12h1000v500H0z" />
       <path d="M0 12h1000v375H0z" />
       <path fill="#e70013" d="M0 12h1000v125H0z" />
@@ -44,17 +46,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="ly-a">
+    <clipPath id="ly-a{id}">
       <path d="M166.7-20h666.6v500H166.7z" />
     </clipPath>
 
-    <mask id="LySvelteFlagIconRound">
+    <mask id="LySvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#LySvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#ly-a)" transform="matrix(.96 0 0 .96 -160 19.2)">
+  <g mask="{ round ? 'url(#LySvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#ly-a{id})" transform="matrix(.96 0 0 .96 -160 19.2)">
       <path fill="#239e46" d="M0-20h1000v500H0z" />
       <path d="M0-20h1000v375H0z" />
       <path fill="#e70013" d="M0-20h1000v125H0z" />

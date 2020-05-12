@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,17 +15,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M0 0h512v512H0z" />
     </clipPath>
 
-    <mask id="NaSvelteFlagIconRound">
+    <mask id="NaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#NaSvelteFlagIconRound)' : '' }">
-    <g fill-rule="evenodd" clip-path="url(#a)">
+  <g mask="{ round ? 'url(#NaSvelteFlagIconRound' + id + ')' : '' }">
+    <g fill-rule="evenodd" clip-path="url(#a{id})">
       <path fill="#fff" d="M0 0h512v512H0z" />
       <path fill="#3662a2" d="M-108.2.2l.8 368.6L466.6 0l-574.8.2z" />
       <path fill="#38a100" d="M630.7 511.5l-1.4-383.2-579 383.5 580.4-.3z" />
@@ -53,17 +55,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="na-a">
+    <clipPath id="na-a{id}">
       <path fill-opacity=".7" d="M0 0h640v480H0z" />
     </clipPath>
 
-    <mask id="NaSvelteFlagIconRound">
+    <mask id="NaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#NaSvelteFlagIconRound)' : '' }">
-    <g fill-rule="evenodd" clip-path="url(#na-a)">
+  <g mask="{ round ? 'url(#NaSvelteFlagIconRound' + id + ')' : '' }">
+    <g fill-rule="evenodd" clip-path="url(#na-a{id})">
       <path fill="#fff" d="M0 0h640v480H0z" />
       <path fill="#3662a2" d="M-26.4.2l.8 345.6L512.5 0-26.4.2z" />
       <path fill="#38a100" d="M666.4 479.6L665 120.3 122.3 479.8l544-.2z" />

@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,12 +16,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="GiSvelteFlagIconRound">
+    <mask id="GiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GiSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#da000c" d="M0 0h512v512H0z" />
     <path fill="#fff" d="M0 0h512v343H0z" />
     <g stroke="#000" transform="matrix(2 0 0 2 -256 0)">
@@ -93,12 +95,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="GiSvelteFlagIconRound">
+    <mask id="GiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GiSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#da000c" d="M0 0h640v480H0z" />
     <path fill="#fff" d="M0 0h640v321.6H0z" />
     <g stroke="#000" transform="translate(-160) scale(1.875)">

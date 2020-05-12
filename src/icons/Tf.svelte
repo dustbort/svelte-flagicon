@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,14 +16,14 @@
   width="{size}"
 >
   <defs>
-    <path id="a" fill="#fff" d="M0-21l12.3 38L-20-6.5h40L-12.3 17z" />
+    <path id="a{id}" fill="#fff" d="M0-21l12.3 38L-20-6.5h40L-12.3 17z" />
 
-    <mask id="TfSvelteFlagIconRound">
+    <mask id="TfSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#TfSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#TfSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#002395" d="M0 0h512v512H0z" />
     <path fill="#fff" d="M0 0h312.3v210H0z" />
     <path fill="#002395" d="M0 0h102.4v204.8H0z" />
@@ -83,14 +85,14 @@
   width="{size}"
 >
   <defs>
-    <path id="a" fill="#fff" d="M0-21l12.3 38L-20-6.5h40L-12.3 17z" />
+    <path id="a{id}" fill="#fff" d="M0-21l12.3 38L-20-6.5h40L-12.3 17z" />
 
-    <mask id="TfSvelteFlagIconRound">
+    <mask id="TfSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#TfSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#TfSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#002395" d="M0 0h640v480H0z" />
     <path fill="#fff" d="M0 0h292.8v196.8H0z" />
     <path fill="#002395" d="M0 0h96v192H0z" />

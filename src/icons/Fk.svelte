@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,12 +16,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="FkSvelteFlagIconRound">
+    <mask id="FkSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#FkSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#FkSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs784">
       <linearGradient
         id="b"
@@ -653,12 +655,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="FkSvelteFlagIconRound">
+    <mask id="FkSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#FkSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#FkSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs2935">
       <linearGradient
         id="b"

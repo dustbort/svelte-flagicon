@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,12 +16,12 @@
   width="{size}"
 >
   <defs>
-    <radialGradient id="a">
+    <radialGradient id="a{id}">
       <stop offset=".2" stop-color="#f9f0aa" />
       <stop offset="1" stop-color="#b07e09" />
     </radialGradient>
     <radialGradient
-      id="d"
+      id="d{id}"
       cx="447.4"
       cy="308.3"
       r="16.5"
@@ -27,7 +29,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="e"
+      id="e{id}"
       cx="451.6"
       cy="313"
       r="10.9"
@@ -35,7 +37,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="f"
+      id="f{id}"
       cx="454.1"
       cy="308.6"
       r="9.8"
@@ -43,7 +45,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="g"
+      id="g{id}"
       cx="458.4"
       cy="307.1"
       r="17.4"
@@ -51,7 +53,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="j"
+      id="j{id}"
       cx="446"
       cy="252.4"
       r="13"
@@ -59,7 +61,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="m"
+      id="m{id}"
       cx="477.9"
       cy="215.3"
       r=".3"
@@ -69,7 +71,7 @@
       <stop offset="1" stop-color="#4c0505" />
     </radialGradient>
     <radialGradient
-      id="n"
+      id="n{id}"
       cx="489.1"
       cy="210.3"
       r=".3"
@@ -82,7 +84,7 @@
       <stop offset="1" stop-color="#fff" stop-opacity="0" />
     </radialGradient>
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="473.9"
       x2="472.4"
       y1="259.2"
@@ -93,7 +95,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="i"
+      id="i{id}"
       x1="483.1"
       x2="485.5"
       y1="296.7"
@@ -104,7 +106,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="k"
+      id="k{id}"
       x1="451.5"
       x2="455.4"
       y1="249.5"
@@ -115,7 +117,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="l"
+      id="l{id}"
       x1="473.3"
       x2="475.9"
       y1="237.3"
@@ -126,12 +128,12 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
 
-    <mask id="GtSvelteFlagIconRound">
+    <mask id="GtSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GtSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GtSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#4997d0" d="M0 0h512v512H0z" />
     <path fill="#fff" d="M170.7 0h170.6v512H170.7z" />
     <g transform="translate(0 96) scale(.53333)">
@@ -421,19 +423,19 @@
       </g>
       <g stroke="#999270" stroke-width=".2">
         <path
-          fill="url(#d)"
+          fill="url(#d{id})"
           d="M452.2 318.1s-6.2.7-7.9-7.8c-1.8-9.1 5.3-10 5.3-10s8.1-.9 13.2-1l2.2 18-12.8.8z"
         />
         <path
-          fill="url(#e)"
+          fill="url(#e{id})"
           d="M453 315.4s-4 .7-4.8-5.6c-.6-4.5 2.2-5.1 2.2-5.1l9.2 1.6v8.2l-6.6.9z"
         />
         <path
-          fill="url(#f)"
+          fill="url(#f{id})"
           d="M450.4 304.7s5.9-.4 9-.8l1.3 5.7-7.1.4s-.5-5.1-3.2-5.3z"
         />
         <path
-          fill="url(#g)"
+          fill="url(#g{id})"
           d="M449.2 300.4s7.5-1.9 8.5 6.5c.2 2.1-1 7.1-4.7 8.5l13.9-1.5-1.3-15-4.6.4s-10 .3-11.8 1z"
         />
         <path
@@ -441,20 +443,23 @@
           d="M452.2 318.1s51.9-3.5 57.2-3.3c15.8-8.6 0-42.5-13.3-61.5 1.5-4.3-29.9-13.9-44-13-1.9 0-3.6.2-5.2.3-7.7.8-7.8 10.7-4.7 17 3 6 30.3 55 11.2 60.3l-1.2.2z"
         />
         <path
-          fill="url(#h)"
+          fill="url(#h{id})"
           d="M507.8 273.3a148.3 148.3 0 00-11.7-20c1.5-4.3-29.9-13.9-44-13-1.9 0-3.6.2-5.2.3-7.7.8-7.8 10.7-4.7 17 1 1.8 4.3 8 7.9 15.7"
         />
         <path
-          fill="url(#i)"
+          fill="url(#i{id})"
           d="M455 285c5.6 14.6 8.7 30-1.6 32.8l-1.2.3s52-3.5 57.2-3.3c8.6-4.7 7.8-16.8 3.2-30"
         />
         <path
-          fill="url(#j)"
+          fill="url(#j{id})"
           d="M447.4 243.5c-3.7 0-4.7 3.6-4.6 5.8.1 6 4.6 6.2 4.6 6.2l6-.3 2.8-12.2-8.8.5z"
         />
-        <path fill="url(#k)" d="M447.4 243.5l8.8-.5 1 9.1-7.8.4s2.5-7.3-2-9z" />
         <path
-          fill="url(#l)"
+          fill="url(#k{id})"
+          d="M447.4 243.5l8.8-.5 1 9.1-7.8.4s2.5-7.3-2-9z"
+        />
+        <path
+          fill="url(#l{id})"
           d="M496.1 253.3c6.7-1 6.6-10 2-13.7-15.5-.5-35.9-.1-50.6 1 1.7 0 6.3.4 6.9 6.5a8.2 8.2 0 01-3 7c-2 1.4-4 1.4-4 1.4h3.6l3-.4c21-2.7 42-1.8 42-1.8h.1z"
         />
         <path
@@ -465,7 +470,7 @@
       </g>
       <g fill="#448127" stroke="#34541f" stroke-width=".2">
         <path
-          fill="url(#m)"
+          fill="url(#m{id})"
           stroke="#4c0505"
           d="M475.8 219.4L472 224c-1.2 5.2 1.8 9.2 7.7 12.6 4.7 3 13.5 3.7 16.3 1.3l-13.7-13-6.5-5.4z"
         />
@@ -484,7 +489,7 @@
         d="M471 216.7a9.9 9.9 0 011-.3 9.8 9.8 0 011.2-.2 9.8 9.8 0 01-1 .3 10 10 0 01-1.2.2z"
       />
       <circle cx="477.7" cy="215.4" r=".8" stroke="#000" stroke-width=".1" />
-      <circle cx="477.9" cy="215.3" r=".3" fill="url(#n)" />
+      <circle cx="477.9" cy="215.3" r=".3" fill="url(#n{id})" />
       <g fill="#34541f">
         <path
           d="M488.2 389.7a83.4 83.4 0 011.5-4.4 96.2 96.2 0 011.8-4.4c1.2-2.9 2.7-5.7 4.1-8.4a199.6 199.6 0 014.7-8.2 354.4 354.4 0 012.4-4l2.5-4-2.4 4a400 400 0 00-2.4 4.1l-4.6 8.2a133.7 133.7 0 00-4.2 8.4 98.1 98.1 0 00-1.8 4.3 82.7 82.7 0 00-1.6 4.4zm-18.9-9.5a75.8 75.8 0 005-2.3 72.3 72.3 0 004.6-2.7 72 72 0 008.8-6.5 84.7 84.7 0 007.7-7.5 113.6 113.6 0 003.6-4.1l3.4-4.3a153.8 153.8 0 01-3.3 4.3 111.9 111.9 0 01-3.6 4.2 81.9 81.9 0 01-7.7 7.6 70 70 0 01-8.8 6.4 71.3 71.3 0 01-4.7 2.6 77 77 0 01-5 2.3zm37.3-29.3a138.7 138.7 0 004.3-6.7l4-6.8a341.8 341.8 0 003.7-7l3.7-7-1.7 3.5-1.8 3.6a256 256 0 01-3.7 7 160.5 160.5 0 01-4 6.8 93.5 93.5 0 01-4.5 6.6zm6-25.1a58.4 58.4 0 004.6-6.4 60.2 60.2 0 003.8-7 72.6 72.6 0 005-15l.4-2a61 61 0 00.7-6 52 52 0 000-7.9 50.6 50.6 0 00-1.3-7.8 53.4 53.4 0 00-2.4-7.6 53.5 53.5 0 012.5 7.5 50.5 50.5 0 011.3 7.9c.2 2.6.2 5.3 0 8a61.3 61.3 0 01-.6 6 90.3 90.3 0 01-.4 1.9 72.7 72.7 0 01-5 15 59.9 59.9 0 01-4 7 58.2 58.2 0 01-4.7 6.4z"
@@ -555,12 +560,12 @@
   width="{size}"
 >
   <defs>
-    <radialGradient id="a">
+    <radialGradient id="a{id}">
       <stop offset=".2" stop-color="#f9f0aa" />
       <stop offset="1" stop-color="#b07e09" />
     </radialGradient>
     <radialGradient
-      id="d"
+      id="d{id}"
       cx="447.4"
       cy="308.3"
       r="16.5"
@@ -568,7 +573,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="e"
+      id="e{id}"
       cx="451.6"
       cy="313"
       r="10.9"
@@ -576,7 +581,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="f"
+      id="f{id}"
       cx="454.1"
       cy="308.6"
       r="9.8"
@@ -584,7 +589,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="g"
+      id="g{id}"
       cx="458.4"
       cy="307.1"
       r="17.4"
@@ -592,7 +597,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="j"
+      id="j{id}"
       cx="446"
       cy="252.4"
       r="13"
@@ -600,7 +605,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="m"
+      id="m{id}"
       cx="477.9"
       cy="215.3"
       r=".3"
@@ -610,7 +615,7 @@
       <stop offset="1" stop-color="#4c0505" />
     </radialGradient>
     <radialGradient
-      id="n"
+      id="n{id}"
       cx="489.1"
       cy="210.3"
       r=".3"
@@ -623,7 +628,7 @@
       <stop offset="1" stop-color="#fff" stop-opacity="0" />
     </radialGradient>
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="473.9"
       x2="472.4"
       y1="259.2"
@@ -634,7 +639,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="i"
+      id="i{id}"
       x1="483.1"
       x2="485.5"
       y1="296.7"
@@ -645,7 +650,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="k"
+      id="k{id}"
       x1="451.5"
       x2="455.4"
       y1="249.5"
@@ -656,7 +661,7 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
     <linearGradient
-      id="l"
+      id="l{id}"
       x1="473.3"
       x2="475.9"
       y1="237.3"
@@ -667,12 +672,12 @@
       <stop offset="1" stop-color="#b07e09" />
     </linearGradient>
 
-    <mask id="GtSvelteFlagIconRound">
+    <mask id="GtSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GtSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GtSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#4997d0" d="M0 0h640v480H0z" />
     <path fill="#fff" d="M213.3 0h213.4v480H213.3z" />
     <g transform="translate(0 40) scale(.66667)">
@@ -962,19 +967,19 @@
       </g>
       <g stroke="#999270" stroke-width=".2">
         <path
-          fill="url(#d)"
+          fill="url(#d{id})"
           d="M452.2 318.1s-6.2.7-7.9-7.8c-1.8-9.1 5.3-10 5.3-10s8.1-.9 13.2-1l2.2 18-12.8.8z"
         />
         <path
-          fill="url(#e)"
+          fill="url(#e{id})"
           d="M453 315.4s-4 .7-4.8-5.6c-.6-4.5 2.2-5.1 2.2-5.1l9.2 1.6v8.2l-6.6.9z"
         />
         <path
-          fill="url(#f)"
+          fill="url(#f{id})"
           d="M450.4 304.7s5.9-.4 9-.8l1.3 5.7-7.1.4s-.5-5.1-3.2-5.3z"
         />
         <path
-          fill="url(#g)"
+          fill="url(#g{id})"
           d="M449.2 300.4s7.5-1.9 8.5 6.5c.2 2.1-1 7.1-4.7 8.5l13.9-1.5-1.3-15-4.6.4s-10 .3-11.8 1z"
         />
         <path
@@ -982,20 +987,23 @@
           d="M452.2 318.1s51.9-3.5 57.2-3.3c15.8-8.6 0-42.5-13.3-61.5 1.5-4.3-29.9-13.9-44-13-1.9 0-3.6.2-5.2.3-7.7.8-7.8 10.7-4.7 17 3 6 30.3 55 11.2 60.3l-1.2.2z"
         />
         <path
-          fill="url(#h)"
+          fill="url(#h{id})"
           d="M507.8 273.3a148.3 148.3 0 00-11.7-20c1.5-4.3-29.9-13.9-44-13-1.9 0-3.6.2-5.2.3-7.7.8-7.8 10.7-4.7 17 1 1.8 4.3 8 7.9 15.7"
         />
         <path
-          fill="url(#i)"
+          fill="url(#i{id})"
           d="M455 285c5.6 14.6 8.7 30-1.6 32.8l-1.2.3s52-3.5 57.2-3.3c8.6-4.7 7.8-16.8 3.2-30"
         />
         <path
-          fill="url(#j)"
+          fill="url(#j{id})"
           d="M447.4 243.5c-3.7 0-4.7 3.6-4.6 5.8.1 6 4.6 6.2 4.6 6.2l6-.3 2.8-12.2-8.8.5z"
         />
-        <path fill="url(#k)" d="M447.4 243.5l8.8-.5 1 9.1-7.8.4s2.5-7.3-2-9z" />
         <path
-          fill="url(#l)"
+          fill="url(#k{id})"
+          d="M447.4 243.5l8.8-.5 1 9.1-7.8.4s2.5-7.3-2-9z"
+        />
+        <path
+          fill="url(#l{id})"
           d="M496.1 253.3c6.7-1 6.6-10 2-13.7-15.5-.5-35.9-.1-50.6 1 1.7 0 6.3.4 6.9 6.5a8.2 8.2 0 01-3 7c-2 1.4-4 1.4-4 1.4h3.6l3-.4c21-2.7 42-1.8 42-1.8h.1z"
         />
         <path
@@ -1006,7 +1014,7 @@
       </g>
       <g fill="#448127" stroke="#34541f" stroke-width=".2">
         <path
-          fill="url(#m)"
+          fill="url(#m{id})"
           stroke="#4c0505"
           d="M475.8 219.4L472 224c-1.2 5.2 1.8 9.2 7.7 12.6 4.7 3 13.5 3.7 16.3 1.3l-13.7-13-6.5-5.4z"
         />
@@ -1025,7 +1033,7 @@
         d="M471 216.7a9.9 9.9 0 011-.3 9.8 9.8 0 011.2-.2 9.8 9.8 0 01-1 .3 10 10 0 01-1.2.2z"
       />
       <circle cx="477.7" cy="215.4" r=".8" stroke="#000" stroke-width=".1" />
-      <circle cx="477.9" cy="215.3" r=".3" fill="url(#n)" />
+      <circle cx="477.9" cy="215.3" r=".3" fill="url(#n{id})" />
       <g fill="#34541f">
         <path
           d="M488.2 389.7a83.4 83.4 0 011.5-4.4 96.2 96.2 0 011.8-4.4c1.2-2.9 2.7-5.7 4.1-8.4a199.6 199.6 0 014.7-8.2 354.4 354.4 0 012.4-4l2.5-4-2.4 4a400 400 0 00-2.4 4.1l-4.6 8.2a133.7 133.7 0 00-4.2 8.4 98.1 98.1 0 00-1.8 4.3 82.7 82.7 0 00-1.6 4.4zm-18.9-9.5a75.8 75.8 0 005-2.3 72.3 72.3 0 004.6-2.7 72 72 0 008.8-6.5 84.7 84.7 0 007.7-7.5 113.6 113.6 0 003.6-4.1l3.4-4.3a153.8 153.8 0 01-3.3 4.3 111.9 111.9 0 01-3.6 4.2 81.9 81.9 0 01-7.7 7.6 70 70 0 01-8.8 6.4 71.3 71.3 0 01-4.7 2.6 77 77 0 01-5 2.3zm37.3-29.3a138.7 138.7 0 004.3-6.7l4-6.8a341.8 341.8 0 003.7-7l3.7-7-1.7 3.5-1.8 3.6a256 256 0 01-3.7 7 160.5 160.5 0 01-4 6.8 93.5 93.5 0 01-4.5 6.6zm6-25.1a58.4 58.4 0 004.6-6.4 60.2 60.2 0 003.8-7 72.6 72.6 0 005-15l.4-2a61 61 0 00.7-6 52 52 0 000-7.9 50.6 50.6 0 00-1.3-7.8 53.4 53.4 0 00-2.4-7.6 53.5 53.5 0 012.5 7.5 50.5 50.5 0 011.3 7.9c.2 2.6.2 5.3 0 8a61.3 61.3 0 01-.6 6 90.3 90.3 0 01-.4 1.9 72.7 72.7 0 01-5 15 59.9 59.9 0 01-4 7 58.2 58.2 0 01-4.7 6.4z"

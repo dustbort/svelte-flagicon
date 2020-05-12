@@ -25,21 +25,36 @@ function fixSvg(name, code) {
     `;
   }
 
-  return code
+  let defIds = [];
+  defs = defs.replace(/\Wid="[^"]+"/g, p => {
+    const defId = p.substr(5, p.length - 6);
+    defIds.push(defId);
+    return `${p[0]}id="${defId}{id}"`;
+  });
+
+  for (const defId of defIds) {
+    code = code.replace(`url(#${defId})`, `url(#${defId}{id})`);
+  }
+
+  code = code
     .replace(/<svg [^>]*>/, p => `
       ${p.substr(0, p.length - 1)} width="{size}">
       <defs>
         ${defs}
       </defs>
-      <g mask="{ round ? 'url(#${name}SvelteFlagIconRound)' : '' }">
+      <g mask="{ round ? 'url(#${name}SvelteFlagIconRound' + id + ')' : '' }">
     `)
     .replace("</svg>", "</g></svg>");
   ;
+
+  return code;
 }
 
 module.exports.getSvelte = (name, svg1x1, svg4x3) => {
   return `
     <script>
+      import { v4 as uuidv4 } from 'uuid';
+      export let id = uuidv4();
       export let size = 32;
       export let round = false;
       export let square = false;

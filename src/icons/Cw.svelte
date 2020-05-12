@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,18 +16,18 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M0 0h9000v9000H0z" />
     </clipPath>
-    <path id="b" d="M0-1l.2.7H1L.3 0l.2.7L0 .4l-.6.4.2-.7-.5-.4h.7z" />
+    <path id="b{id}" d="M0-1l.2.7H1L.3 0l.2.7L0 .4l-.6.4.2-.7-.5-.4h.7z" />
 
-    <mask id="CwSvelteFlagIconRound">
+    <mask id="CwSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CwSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#a)" transform="scale(.057)">
+  <g mask="{ round ? 'url(#CwSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#a{id})" transform="scale(.057)">
       <path fill="#002b7f" d="M0 0h13500v9000H0z" />
       <path fill="#f9e814" d="M0 5625h13500v1125H0z" />
       <use
@@ -60,18 +62,18 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="cw-a">
+    <clipPath id="cw-a{id}">
       <path fill-opacity=".7" d="M0 0h682.7v512H0z" />
     </clipPath>
-    <path id="b" d="M0-1l.2.7H1L.3 0l.2.7L0 .4l-.6.4.2-.7-.5-.4h.7z" />
+    <path id="b{id}" d="M0-1l.2.7H1L.3 0l.2.7L0 .4l-.6.4.2-.7-.5-.4h.7z" />
 
-    <mask id="CwSvelteFlagIconRound">
+    <mask id="CwSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CwSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#cw-a)" transform="scale(.94)">
+  <g mask="{ round ? 'url(#CwSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#cw-a{id})" transform="scale(.94)">
       <path fill="#002b7f" d="M0 0h768v512H0z" />
       <path fill="#f9e814" d="M0 320h768v64H0z" />
       <use

@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -15,20 +17,20 @@
 >
   <defs>
     <path
-      id="a"
+      id="a{id}"
       d="M0-360l69.4 215.8 212-80.3L156-35.6 351 80.1 125 99.8l31.1 224.6L0 160l-156.2 164.3 31.1-224.5L-351 80l195-115.7-125.5-188.9 212 80.3z"
     />
     <path
-      id="b"
+      id="b{id}"
       d="M0-210L54.9-75.5l144.8 10.6-111 93.8 34.7 141L0 93.3-123.4 170l34.6-141-111-93.8 145-10.6z"
     />
 
-    <mask id="CcSvelteFlagIconRound">
+    <mask id="CcSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CcSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#CcSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="green" d="M0 0h512v512H0z" />
     <circle cx="268.2" cy="250.4" r="61.2" fill="#ffe000" />
     <circle cx="287.3" cy="250.4" r="50.4" fill="green" />
@@ -64,20 +66,20 @@
 >
   <defs>
     <path
-      id="a"
+      id="a{id}"
       d="M0-360l69.4 215.8 212-80.3L156-35.6 351 80.1 125 99.8l31.1 224.6L0 160l-156.2 164.3 31.1-224.5L-351 80l195-115.7-125.5-188.9 212 80.3z"
     />
     <path
-      id="b"
+      id="b{id}"
       d="M0-210L54.9-75.5l144.8 10.6-111 93.8 34.7 141L0 93.3-123.4 170l34.6-141-111-93.8 145-10.6z"
     />
 
-    <mask id="CcSvelteFlagIconRound">
+    <mask id="CcSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#CcSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#CcSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="green" d="M0 0h640v480H0z" />
     <circle cx="320" cy="240" r="66.7" fill="#ffe000" />
     <circle cx="340.8" cy="240" r="54.9" fill="green" />

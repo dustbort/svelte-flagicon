@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,12 +15,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="AiSvelteFlagIconRound">
+    <mask id="AiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#AiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#AiSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs1837">
       <clipPath id="a">
         <path id="path1834" fill-opacity=".7" d="M0 0h640v480H0z" />
@@ -857,12 +859,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="AiSvelteFlagIconRound">
+    <mask id="AiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#AiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#AiSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs1837">
       <clipPath id="ai-a">
         <path id="path1834" fill-opacity=".7" d="M0 0h640v480H0z" />

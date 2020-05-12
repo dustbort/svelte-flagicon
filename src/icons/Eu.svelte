@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,24 +16,24 @@
   width="{size}"
 >
   <defs>
-    <g id="d">
-      <g id="b">
-        <path id="a" d="M0-1l-.3 1 .5.1z" />
+    <g id="d{id}">
+      <g id="b{id}">
+        <path id="a{id}" d="M0-1l-.3 1 .5.1z" />
         <use transform="scale(-1 1)" xlink:href="#a" />
       </g>
-      <g id="c">
+      <g id="c{id}">
         <use transform="rotate(72)" xlink:href="#b" />
         <use transform="rotate(144)" xlink:href="#b" />
       </g>
       <use transform="scale(-1 1)" xlink:href="#c" />
     </g>
 
-    <mask id="EuSvelteFlagIconRound">
+    <mask id="EuSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#EuSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#EuSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#039" d="M0 0h512v512H0z" />
     <g fill="#fc0" transform="translate(256 258.4) scale(25.28395)">
       <use width="100%" height="100%" y="-6" xlink:href="#d" />
@@ -78,24 +80,24 @@
   width="{size}"
 >
   <defs>
-    <g id="d">
-      <g id="b">
-        <path id="a" d="M0-1l-.3 1 .5.1z" />
+    <g id="d{id}">
+      <g id="b{id}">
+        <path id="a{id}" d="M0-1l-.3 1 .5.1z" />
         <use transform="scale(-1 1)" xlink:href="#a" />
       </g>
-      <g id="c">
+      <g id="c{id}">
         <use transform="rotate(72)" xlink:href="#b" />
         <use transform="rotate(144)" xlink:href="#b" />
       </g>
       <use transform="scale(-1 1)" xlink:href="#c" />
     </g>
 
-    <mask id="EuSvelteFlagIconRound">
+    <mask id="EuSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#EuSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#EuSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#039" d="M0 0h640v480H0z" />
     <g fill="#fc0" transform="translate(320 242.3) scale(23.7037)">
       <use width="100%" height="100%" y="-6" xlink:href="#d" />

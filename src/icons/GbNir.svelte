@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,12 +16,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="GbNirSvelteFlagIconRound">
+    <mask id="GbNirSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GbNirSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GbNirSvelteFlagIconRound' + id + ')' : '' }">
     <path id="rect5053" fill="#fff" stroke-width="4.7" d="M0 0h512v512H0z" />
     <rect id="rect1126" fill="#fff" fill-rule="evenodd" rx="0" ry="0" />
     <rect
@@ -778,12 +780,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="GbNirSvelteFlagIconRound">
+    <mask id="GbNirSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GbNirSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GbNirSvelteFlagIconRound' + id + ')' : '' }">
     <path id="rect6943" fill="#fff" stroke-width="8.1" d="M0 0h640v480H0z" />
     <rect id="rect6703" fill="#fff" fill-rule="evenodd" rx="0" ry="0" />
     <rect

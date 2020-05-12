@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,17 +15,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M70.1 0h499.6v499.6H70.1z" />
     </clipPath>
 
-    <mask id="ZaSvelteFlagIconRound">
+    <mask id="ZaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#ZaSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#a)" transform="translate(-71.9) scale(1.0248)">
+  <g mask="{ round ? 'url(#ZaSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#a{id})" transform="translate(-71.9) scale(1.0248)">
       <g fill-rule="evenodd" stroke-width="1pt">
         <path d="M0 397.9v-296l220.4 147.9L0 397.9z" />
         <path fill="#00c" d="M150.4 499.7l247.4-166.5h351.6v166.5h-599z" />
@@ -54,17 +56,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="za-a">
+    <clipPath id="za-a{id}">
       <path fill-opacity=".7" d="M-71.9 0h682.7v512H-71.9z" />
     </clipPath>
 
-    <mask id="ZaSvelteFlagIconRound">
+    <mask id="ZaSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#ZaSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#za-a)" transform="translate(67.4) scale(.93748)">
+  <g mask="{ round ? 'url(#ZaSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#za-a{id})" transform="translate(67.4) scale(.93748)">
       <g fill-rule="evenodd" stroke-width="1pt">
         <path d="M-71.9 407.8V104.4L154 256.1-72 407.8z" />
         <path fill="#00c" d="M82.2 512.1l253.6-170.6H696V512H82.2z" />

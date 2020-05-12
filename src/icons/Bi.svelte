@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,19 +15,19 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill="gray" d="M60.8 337h175v175h-175z" />
     </clipPath>
 
-    <mask id="BiSvelteFlagIconRound">
+    <mask id="BiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BiSvelteFlagIconRound' + id + ')' : '' }">
     <g
       fill-rule="evenodd"
-      clip-path="url(#a)"
+      clip-path="url(#a{id})"
       transform="translate(-178 -986) scale(2.9257)"
     >
       <path
@@ -61,19 +63,19 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="bi-a">
+    <clipPath id="bi-a{id}">
       <path fill-opacity=".7" d="M-90.5 0H592v512H-90.5z" />
     </clipPath>
 
-    <mask id="BiSvelteFlagIconRound">
+    <mask id="BiSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BiSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BiSvelteFlagIconRound' + id + ')' : '' }">
     <g
       fill-rule="evenodd"
-      clip-path="url(#bi-a)"
+      clip-path="url(#bi-a{id})"
       transform="translate(84.9) scale(.9375)"
     >
       <path

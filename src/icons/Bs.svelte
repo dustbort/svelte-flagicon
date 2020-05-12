@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,19 +15,19 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M56.6 26.4H537v480.3H56.6z" />
     </clipPath>
 
-    <mask id="BsSvelteFlagIconRound">
+    <mask id="BsSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BsSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BsSvelteFlagIconRound' + id + ')' : '' }">
     <g
       fill-rule="evenodd"
-      clip-path="url(#a)"
+      clip-path="url(#a{id})"
       transform="matrix(1.066 0 0 1.067 -60.4 -28.1)"
     >
       <path fill="#fff" d="M990 506.2H9.4V27.6H990z" />
@@ -45,17 +47,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="bs-a">
+    <clipPath id="bs-a{id}">
       <path fill-opacity=".7" d="M-12 0h640v480H-12z" />
     </clipPath>
 
-    <mask id="BsSvelteFlagIconRound">
+    <mask id="BsSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BsSvelteFlagIconRound)' : '' }">
-    <g fill-rule="evenodd" clip-path="url(#bs-a)" transform="translate(12)">
+  <g mask="{ round ? 'url(#BsSvelteFlagIconRound' + id + ')' : '' }">
+    <g fill-rule="evenodd" clip-path="url(#bs-a{id})" transform="translate(12)">
       <path fill="#fff" d="M968.5 480h-979V1.8h979z" />
       <path fill="#ffe900" d="M968.5 344.5h-979V143.3h979z" />
       <path fill="#08ced6" d="M968.5 480h-979V320.6h979zm0-318.7h-979V2h979z" />

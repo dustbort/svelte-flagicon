@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,12 +16,12 @@
   width="{size}"
 >
   <defs>
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="red" />
       <stop offset="1" stop-color="#ff0" />
     </linearGradient>
     <linearGradient
-      id="c"
+      id="c{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -29,7 +31,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="d"
+      id="d{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -39,7 +41,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="e"
+      id="e{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -49,7 +51,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="f"
+      id="f{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -59,7 +61,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="g"
+      id="g{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -69,7 +71,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -79,7 +81,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="i"
+      id="i{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -89,7 +91,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="j"
+      id="j{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -99,7 +101,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="k"
+      id="k{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -109,7 +111,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="m"
+      id="m{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -119,7 +121,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="n"
+      id="n{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -129,7 +131,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="l"
+      id="l{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -138,17 +140,17 @@
       gradientUnits="userSpaceOnUse"
       xlink:href="#a"
     />
-    <clipPath id="b">
+    <clipPath id="b{id}">
       <path fill-opacity=".7" d="M0 0h512v512H0z" />
     </clipPath>
 
-    <mask id="VgSvelteFlagIconRound">
+    <mask id="VgSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#VgSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#b)">
+  <g mask="{ round ? 'url(#VgSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#b{id})">
       <path fill="#006" d="M0 0h1024v512H0z" />
       <path fill="#006" fill-rule="evenodd" d="M0 0h512v256H0z" />
       <g stroke-width="1pt">
@@ -204,7 +206,7 @@
         d="M289.6 409.8h15.6m-22.7-9.1s1.3 7.2 7 9"
       />
       <path
-        fill="url(#c)"
+        fill="url(#c{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -245,7 +247,7 @@
         d="M289 373.5h15.5m-22.6-9.2s1.2 7.3 7 9"
       />
       <path
-        fill="url(#d)"
+        fill="url(#d{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -286,7 +288,7 @@
         d="M416.8 340.4h15.5m-22.7-9.1s1.3 7.2 7 9"
       />
       <path
-        fill="url(#e)"
+        fill="url(#e{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -327,7 +329,7 @@
         d="M292 305h15.5m-22.7-9s1.3 7.2 7 9"
       />
       <path
-        fill="url(#f)"
+        fill="url(#f{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -368,7 +370,7 @@
         d="M292.2 270.4l15.6-.1m-22.7-9.1s1.2 7.3 7 9"
       />
       <path
-        fill="url(#g)"
+        fill="url(#g{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -409,7 +411,7 @@
         d="M292.9 235.1h15.5m-22.6-9.2s1.2 7.3 7 9"
       />
       <path
-        fill="url(#h)"
+        fill="url(#h{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -450,7 +452,7 @@
         d="M417.7 235.7h15.5m-22.6-9.2s1.2 7.3 7 9"
       />
       <path
-        fill="url(#i)"
+        fill="url(#i{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -491,7 +493,7 @@
         d="M416.6 270.3H432m-22.7-9.2s1.3 7.3 7 9"
       />
       <path
-        fill="url(#j)"
+        fill="url(#j{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -532,7 +534,7 @@
         d="M415 305.6h15.6m-22.7-9.1s1.2 7.2 7 9"
       />
       <path
-        fill="url(#k)"
+        fill="url(#k{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -573,7 +575,7 @@
         d="M416.6 410.2H432m-22.7-9.2s1.3 7.3 7 9"
       />
       <path
-        fill="url(#l)"
+        fill="url(#l{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".8"
@@ -614,7 +616,7 @@
         d="M416.4 375.2h15.5m-22.6-9.1s1.2 7.2 7 9"
       />
       <path
-        fill="url(#m)"
+        fill="url(#m{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -655,7 +657,7 @@
         d="M314.8 342.7h15.5m-22.7-9.2s1.3 7.3 7 9"
       />
       <path
-        fill="url(#n)"
+        fill="url(#n{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -795,12 +797,12 @@
   width="{size}"
 >
   <defs>
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="red" />
       <stop offset="1" stop-color="#ff0" />
     </linearGradient>
     <linearGradient
-      id="c"
+      id="c{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -810,7 +812,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="d"
+      id="d{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -820,7 +822,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="e"
+      id="e{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -830,7 +832,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="f"
+      id="f{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -840,7 +842,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="g"
+      id="g{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -850,7 +852,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="h"
+      id="h{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -860,7 +862,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="i"
+      id="i{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -870,7 +872,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="j"
+      id="j{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -880,7 +882,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="k"
+      id="k{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -890,7 +892,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="l"
+      id="l{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -900,7 +902,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="m"
+      id="m{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -910,7 +912,7 @@
       xlink:href="#a"
     />
     <linearGradient
-      id="n"
+      id="n{id}"
       x1="103.1"
       x2="92.5"
       y1="111.3"
@@ -919,17 +921,17 @@
       gradientUnits="userSpaceOnUse"
       xlink:href="#a"
     />
-    <clipPath id="vg-b">
+    <clipPath id="vg-b{id}">
       <path fill-opacity=".7" d="M0 0h640v480H0z" />
     </clipPath>
 
-    <mask id="VgSvelteFlagIconRound">
+    <mask id="VgSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#VgSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#vg-b)">
+  <g mask="{ round ? 'url(#VgSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#vg-b{id})">
       <path fill="#006" d="M0 0h960v480H0z" />
       <path fill="#006" fill-rule="evenodd" d="M0 0h350v175H0z" />
       <g stroke-width="1pt">
@@ -985,7 +987,7 @@
         d="M412.6 376.4h16m-23.3-9.4s1.3 7.5 7.2 9.2"
       />
       <path
-        fill="url(#c)"
+        fill="url(#c{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1026,7 +1028,7 @@
         d="M412 339h15.9m-23.3-9.3s1.3 7.4 7.2 9.2"
       />
       <path
-        fill="url(#d)"
+        fill="url(#d{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1067,7 +1069,7 @@
         d="M543 305.2h16m-23.2-9.4s1.3 7.4 7.1 9.2"
       />
       <path
-        fill="url(#e)"
+        fill="url(#e{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1108,7 +1110,7 @@
         d="M415 268.9h16m-23.3-9.4s1.3 7.4 7.1 9.2"
       />
       <path
-        fill="url(#f)"
+        fill="url(#f{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1149,7 +1151,7 @@
         d="M415.3 233.2h15.9m-23.2-9.4s1.2 7.5 7.1 9.2"
       />
       <path
-        fill="url(#g)"
+        fill="url(#g{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1190,7 +1192,7 @@
         d="M416 197h15.9m-23.3-9.4s1.3 7.5 7.2 9.3"
       />
       <path
-        fill="url(#h)"
+        fill="url(#h{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1231,7 +1233,7 @@
         d="M544 197.6h16m-23.3-9.4s1.3 7.5 7.2 9.3"
       />
       <path
-        fill="url(#i)"
+        fill="url(#i{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1272,7 +1274,7 @@
         d="M542.9 233.2l16-.1m-23.3-9.4s1.3 7.5 7.1 9.3"
       />
       <path
-        fill="url(#j)"
+        fill="url(#j{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1313,7 +1315,7 @@
         d="M541.3 269.4h16M534 260s1.3 7.4 7.2 9.2"
       />
       <path
-        fill="url(#k)"
+        fill="url(#k{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1354,7 +1356,7 @@
         d="M542.9 376.8h16m-23.3-9.4s1.3 7.4 7.1 9.2"
       />
       <path
-        fill="url(#l)"
+        fill="url(#l{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".8"
@@ -1395,7 +1397,7 @@
         d="M542.7 340.9h16m-23.3-9.4s1.3 7.4 7.2 9.2"
       />
       <path
-        fill="url(#m)"
+        fill="url(#m{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"
@@ -1436,7 +1438,7 @@
         d="M438.4 307.5h16M431 298s1.2 7.5 7.1 9.2"
       />
       <path
-        fill="url(#n)"
+        fill="url(#n{id})"
         fill-rule="evenodd"
         stroke="#000"
         stroke-width=".6"

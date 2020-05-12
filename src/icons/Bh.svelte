@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,12 +15,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="BhSvelteFlagIconRound">
+    <mask id="BhSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BhSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BhSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs448">
       <clipPath id="a">
         <path id="path445" fill-opacity=".7" d="M0 0h640v480H0z" />
@@ -52,12 +54,12 @@
   width="{size}"
 >
   <defs>
-    <mask id="BhSvelteFlagIconRound">
+    <mask id="BhSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#BhSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#BhSvelteFlagIconRound' + id + ')' : '' }">
     <defs id="defs448">
       <clipPath id="bh-a">
         <path id="path445" fill-opacity=".7" d="M0 0h640v480H0z" />

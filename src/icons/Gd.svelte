@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,9 +16,14 @@
   width="{size}"
 >
   <defs>
-    <g id="c">
-      <g id="b">
-        <path id="a" fill="#fcd116" d="M0-1v1h.5" transform="rotate(18 0 -1)" />
+    <g id="c{id}">
+      <g id="b{id}">
+        <path
+          id="a{id}"
+          fill="#fcd116"
+          d="M0-1v1h.5"
+          transform="rotate(18 0 -1)"
+        />
         <use
           width="100%"
           height="100%"
@@ -35,12 +42,12 @@
       <use width="100%" height="100%" transform="rotate(-72)" xlink:href="#b" />
     </g>
 
-    <mask id="GdSvelteFlagIconRound">
+    <mask id="GdSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GdSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GdSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ce1126" d="M0 0h512v512H0z" />
     <path fill="#007a5e" d="M71.7 71.7h368.6v368.6H71.7z" />
     <path fill="#fcd116" d="M71.7 71.7h368.6L71.7 440.4h368.6z" />
@@ -113,9 +120,14 @@
   width="{size}"
 >
   <defs>
-    <g id="c">
-      <g id="b">
-        <path id="a" fill="#fcd116" d="M0-1v1h.5" transform="rotate(18 0 -1)" />
+    <g id="c{id}">
+      <g id="b{id}">
+        <path
+          id="a{id}"
+          fill="#fcd116"
+          d="M0-1v1h.5"
+          transform="rotate(18 0 -1)"
+        />
         <use transform="scale(-1 1)" xlink:href="#a" />
       </g>
       <use transform="rotate(72)" xlink:href="#b" />
@@ -124,12 +136,12 @@
       <use transform="rotate(288)" xlink:href="#b" />
     </g>
 
-    <mask id="GdSvelteFlagIconRound">
+    <mask id="GdSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#GdSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#GdSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ce1126" d="M0 0h640v480H0z" />
     <path fill="#007a5e" d="M67.2 67.2h505.6v345.6H67.2z" />
     <path fill="#fcd116" d="M67.2 67.3h505.6L67.2 412.9h505.6z" />

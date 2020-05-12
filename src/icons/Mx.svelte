@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -15,7 +17,7 @@
 >
   <defs>
     <radialGradient
-      id="b"
+      id="b{id}"
       cx="842.3"
       cy="103.7"
       r="25.9"
@@ -24,7 +26,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="c"
+      id="c{id}"
       cx="651.5"
       cy="550.5"
       r="25.9"
@@ -33,7 +35,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="d"
+      id="d{id}"
       cx="380.8"
       cy="740.4"
       r="25.9"
@@ -41,17 +43,17 @@
       gradientUnits="userSpaceOnUse"
       xlink:href="#a"
     />
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="#fff" />
       <stop offset="1" stop-color="#f15770" />
     </linearGradient>
 
-    <mask id="MxSvelteFlagIconRound">
+    <mask id="MxSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#MxSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#MxSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ce1126" d="M341.3 0H512v512H341.3z" />
     <path fill="#fff" d="M170.7 0h170.6v512H170.7z" />
     <path fill="#006847" d="M0 0h170.7v512H0z" />
@@ -586,7 +588,7 @@
     <ellipse
       cx="272.7"
       cy="229.2"
-      fill="url(#b)"
+      fill="url(#b{id})"
       rx="2.3"
       ry="3.4"
       transform="rotate(8.7)"
@@ -631,7 +633,7 @@
     <ellipse
       cx="327.1"
       cy="-73.3"
-      fill="url(#c)"
+      fill="url(#c{id})"
       rx="3.7"
       ry="2.5"
       transform="rotate(62.9)"
@@ -671,7 +673,7 @@
     <ellipse
       cx="398.3"
       cy="-31.4"
-      fill="url(#d)"
+      fill="url(#d{id})"
       rx="1.8"
       ry="3.6"
       transform="rotate(47.9)"
@@ -1657,7 +1659,7 @@
 >
   <defs>
     <radialGradient
-      id="b"
+      id="b{id}"
       cx="842.3"
       cy="103.7"
       r="25.9"
@@ -1666,7 +1668,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="c"
+      id="c{id}"
       cx="651.5"
       cy="550.5"
       r="25.9"
@@ -1675,7 +1677,7 @@
       xlink:href="#a"
     />
     <radialGradient
-      id="d"
+      id="d{id}"
       cx="380.8"
       cy="740.4"
       r="25.9"
@@ -1683,17 +1685,17 @@
       gradientUnits="userSpaceOnUse"
       xlink:href="#a"
     />
-    <linearGradient id="a">
+    <linearGradient id="a{id}">
       <stop offset="0" stop-color="#fff" />
       <stop offset="1" stop-color="#f15770" />
     </linearGradient>
 
-    <mask id="MxSvelteFlagIconRound">
+    <mask id="MxSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#MxSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#MxSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#ce1126" d="M426.7 0H640v480H426.7z" />
     <path fill="#fff" d="M213.3 0h213.4v480H213.3z" />
     <path fill="#006847" d="M0 0h213.3v480H0z" />
@@ -2230,7 +2232,7 @@
     <ellipse
       cx="328.8"
       cy="207.4"
-      fill="url(#b)"
+      fill="url(#b{id})"
       rx="2.9"
       ry="4.3"
       transform="rotate(8.7)"
@@ -2287,7 +2289,7 @@
     <ellipse
       cx="337.6"
       cy="-128.1"
-      fill="url(#c)"
+      fill="url(#c{id})"
       rx="4.6"
       ry="3.1"
       transform="rotate(62.9)"
@@ -2327,7 +2329,7 @@
     <ellipse
       cx="438.6"
       cy="-93"
-      fill="url(#d)"
+      fill="url(#d{id})"
       rx="2.2"
       ry="4.5"
       transform="rotate(47.9)"

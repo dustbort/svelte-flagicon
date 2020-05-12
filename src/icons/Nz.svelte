@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -14,14 +16,14 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="c">
+    <clipPath id="c{id}">
       <path d="M0 0h600v300H0z" />
     </clipPath>
-    <clipPath id="d">
+    <clipPath id="d{id}">
       <path d="M0 0l300 150H0zm300 0h300L300 150zm0 150h300v150zm0 0v150H0z" />
     </clipPath>
-    <g id="b">
-      <g id="a">
+    <g id="b{id}">
+      <g id="a{id}">
         <path d="M0 0v.5L1 0z" transform="translate(0 -.3)" />
         <path d="M0 0v-.5L1 0z" transform="rotate(-36 .5 -.2)" />
       </g>
@@ -31,12 +33,12 @@
       <use transform="scale(-1 1) rotate(72)" xlink:href="#a" />
     </g>
 
-    <mask id="NzSvelteFlagIconRound">
+    <mask id="NzSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#NzSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#NzSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#00247d" fill-rule="evenodd" d="M0 0h512v512H0z" />
     <g transform="translate(-148.7 134.5) scale(.60566)">
       <use
@@ -106,14 +108,14 @@
       stroke="#fff"
       stroke-width="60"
       d="M0 0l600 300M0 300L600 0"
-      clip-path="url(#c)"
+      clip-path="url(#c{id})"
       transform="scale(.52004 .78924)"
     />
     <path
       stroke="#cc142b"
       stroke-width="40"
       d="M0 0l600 300M0 300L600 0"
-      clip-path="url(#d)"
+      clip-path="url(#d{id})"
       transform="scale(.52004 .78924)"
     />
     <path
@@ -170,14 +172,14 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="nz-c">
+    <clipPath id="nz-c{id}">
       <path d="M0 0h600v300H0z" />
     </clipPath>
-    <clipPath id="nz-d">
+    <clipPath id="nz-d{id}">
       <path d="M0 0l300 150H0zm300 0h300L300 150zm0 150h300v150zm0 0v150H0z" />
     </clipPath>
-    <g id="b">
-      <g id="a">
+    <g id="b{id}">
+      <g id="a{id}">
         <path d="M0 0v.5L1 0z" transform="translate(0 -.3)" />
         <path d="M0 0v-.5L1 0z" transform="rotate(-36 .5 -.2)" />
       </g>
@@ -187,12 +189,12 @@
       <use transform="scale(-1 1) rotate(72)" xlink:href="#a" />
     </g>
 
-    <mask id="NzSvelteFlagIconRound">
+    <mask id="NzSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#NzSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#NzSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#00247d" fill-rule="evenodd" d="M0 0h640v480H0z" />
     <g transform="translate(-93 36.1) scale(.66825)">
       <use
@@ -262,14 +264,14 @@
       stroke="#fff"
       stroke-width="60"
       d="M0 0l600 300M0 300L600 0"
-      clip-path="url(#nz-c)"
+      clip-path="url(#nz-c{id})"
       transform="scale(.60681 .73139)"
     />
     <path
       stroke="#cc142b"
       stroke-width="40"
       d="M0 0l600 300M0 300L600 0"
-      clip-path="url(#nz-d)"
+      clip-path="url(#nz-d{id})"
       transform="scale(.60681 .73139)"
     />
     <path

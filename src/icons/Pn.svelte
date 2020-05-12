@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,22 +15,22 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="b">
+    <clipPath id="b{id}">
       <path d="M-15-7.5h30v15h-30z" />
     </clipPath>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M-15-15h30v30h-30z" />
     </clipPath>
 
-    <mask id="PnSvelteFlagIconRound">
+    <mask id="PnSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#PnSvelteFlagIconRound)' : '' }">
-    <g clip-path="url(#a)" transform="translate(256 256) scale(17.06667)">
+  <g mask="{ round ? 'url(#PnSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#a{id})" transform="translate(256 256) scale(17.06667)">
       <path fill="#00247d" d="M-15-15h60v30h-60z" />
-      <g clip-path="url(#b)" transform="translate(0 -7.5)">
+      <g clip-path="url(#b{id})" transform="translate(0 -7.5)">
         <circle r="20" fill="#00247d" />
         <path stroke="#fff" stroke-width="3" d="M-20-10l40 20m-40 0l40-20" />
         <path stroke="#cf142b" stroke-width="2" d="M-20-10l40 20m-40 0l40-20" />
@@ -258,18 +260,21 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="pn-a">
+    <clipPath id="pn-a{id}">
       <path d="M-15-7.5h30v15h-30z" />
     </clipPath>
 
-    <mask id="PnSvelteFlagIconRound">
+    <mask id="PnSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#PnSvelteFlagIconRound)' : '' }">
+  <g mask="{ round ? 'url(#PnSvelteFlagIconRound' + id + ')' : '' }">
     <path fill="#00247d" d="M0 0h640v480H0z" />
-    <g clip-path="url(#pn-a)" transform="translate(320 160) scale(21.33333)">
+    <g
+      clip-path="url(#pn-a{id})"
+      transform="translate(320 160) scale(21.33333)"
+    >
       <circle r="20" fill="#00247d" />
       <path stroke="#fff" stroke-width="3" d="M-20-10l40 20m-40 0l40-20" />
       <path stroke="#cf142b" stroke-width="2" d="M-20-10l40 20m-40 0l40-20" />

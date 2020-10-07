@@ -58,6 +58,7 @@ export { default as De } from "./icons/De.svelte";
 export { default as Dj } from "./icons/Dj.svelte";
 export { default as Dk } from "./icons/Dk.svelte";
 export { default as Dm } from "./icons/Dm.svelte";
+export { default as Do } from "./icons/Do.svelte";
 export { default as Dz } from "./icons/Dz.svelte";
 export { default as Ec } from "./icons/Ec.svelte";
 export { default as Ee } from "./icons/Ee.svelte";

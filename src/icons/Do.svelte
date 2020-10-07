@@ -1,4 +1,6 @@
 <script>
+  import { v4 as uuidv4 } from "uuid";
+  export let id = uuidv4();
   export let size = 32;
   export let round = false;
   export let square = false;
@@ -13,17 +15,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="a">
+    <clipPath id="a{id}">
       <path fill-opacity=".7" d="M83.7 80.3h364.9v364.9h-365z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="DoSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
-    <g clip-path="url(#a)" transform="translate(-117.4 -112.7) scale(1.403)">
+  <g mask="{ round ? 'url(#DoSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#a{id})" transform="translate(-117.4 -112.7) scale(1.403)">
       <path
         fill="#00319c"
         fill-rule="evenodd"
@@ -7043,17 +7045,17 @@
   width="{size}"
 >
   <defs>
-    <clipPath id="do-a">
+    <clipPath id="do-a{id}">
       <path fill-opacity=".7" d="M-222.6-115.2h958v718.4h-958z" />
     </clipPath>
 
-    <mask id="svelte_flagicons_round">
+    <mask id="DoSvelteFlagIconRound{id}">
       <rect width="100%" height="100%" fill="black" />
       <circle r="50%" cx="50%" cy="50%" fill="white" />
     </mask>
   </defs>
-  <g mask="{ round ? 'url(#svelte_flagicons_round)' : '' }">
-    <g clip-path="url(#do-a)" transform="matrix(.67 0 0 .67 148.7 77)">
+  <g mask="{ round ? 'url(#DoSvelteFlagIconRound' + id + ')' : '' }">
+    <g clip-path="url(#do-a{id})" transform="matrix(.67 0 0 .67 148.7 77)">
       <path fill="#00319c" fill-rule="evenodd" d="M322 329h446.5v273.9H322z" />
       <path
         fill="#d62918"
